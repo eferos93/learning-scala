@@ -40,13 +40,13 @@ object PatternMatching extends App {
 //  note that Any is the root of Scala's type hierarchy
   val priceOfDonut: Any = 2.5
   val priceType = priceOfDonut match {
-    case price: Int => "Int"
-    case price: Double => "Double"
-    case price: Float => "Float"
-    case price: String => "String"
-    case price: Boolean => "Boolean"
-    case price: Char => "Char"
-    case price: Long => "Long"
+    case _: Int => "Int"
+    case _: Double => "Double"
+    case _: Float => "Float"
+    case _: String => "String"
+    case _: Boolean => "Boolean"
+    case _: Char => "Char"
+    case _: Long => "Long"
   }
   println(priceType)
 
