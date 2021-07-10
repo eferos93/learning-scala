@@ -37,6 +37,11 @@ lazy val artifacts = new {
     "ch.qos.logback" % "logback-classic" % logbackV
   )
 
+//  val jodaTime = Seq(
+//    "joda-time" % "joda-time" % "2.10.11-SNAPSHOT",
+//    "org.joda" % "joda-convert" % "1.8"
+//  )
+
   val scalatest = Seq("org.scalatest" %% "scalatest" % scalaTestV % "test")
   val pureconfig = Seq("com.github.pureconfig" %% "pureconfig" % pureconfigV)
 }
