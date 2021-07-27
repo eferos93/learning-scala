@@ -22,6 +22,8 @@ lazy val artifacts = new {
   val logbackV          = "1.3.0-alpha5"
   val scalaTestV        = "3.2.2"
   val pureconfigV       = "0.11.1"
+  val jodaTimeV         = "2.10.11-SNAPSHOT"
+  val orgJodaV          = "2.2.2-SNAPSHOT"
 
   val akkaHttp = Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaActorV,
@@ -38,8 +40,8 @@ lazy val artifacts = new {
   )
 
 //  val jodaTime = Seq(
-//    "joda-time" % "joda-time" % "2.10.11-SNAPSHOT",
-//    "org.joda" % "joda-convert" % "1.8"
+//    "joda-time" % "joda-time" % jodaTimeV,
+//    "org.joda" % "joda-convert" % orgJodaV
 //  )
 
   val scalatest = Seq("org.scalatest" %% "scalatest" % scalaTestV % "test")
