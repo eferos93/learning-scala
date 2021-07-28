@@ -24,9 +24,11 @@ object FactoryPattern extends App {
     import Cakes._
 
     def apply(cake: String): Cake = {
-      case "cupcake" => new Cupcake
-      case "donut" => new Donut
-      case _ => new UnknownCake
+      cake match {
+        case "cupcake" => new Cupcake
+        case "donut" => new Donut
+        case _ => new UnknownCake
+      }
     }
   }
 }
