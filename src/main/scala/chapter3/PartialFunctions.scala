@@ -20,6 +20,8 @@ object PartialFunctions extends App {
   }
 
   val unknownTaste: PartialFunction[String, String] = {
+//        operator @ binds a matched pattern (in this case _) to a variable
+//        (in this case, donut)
     case donut @ _ => s"unknown taste for donut $donut"
   }
 

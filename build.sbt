@@ -43,7 +43,7 @@ lazy val artifacts = new {
 //    "joda-time" % "joda-time" % jodaTimeV,
 //    "org.joda" % "joda-convert" % orgJodaV
 //  )
-
+  val parallelCollections = Seq("org.scala-lang.modules" %% "scala-parallel-collections" % "0.2.0")
   val scalatest = Seq("org.scalatest" %% "scalatest" % scalaTestV % "test")
   val pureconfig = Seq("com.github.pureconfig" %% "pureconfig" % pureconfigV)
 }
@@ -77,6 +77,6 @@ lazy val realWorldAllAboutScala = (project in file("."))
   .settings(name:= "learning-scala")
   .settings(commonSettings: _*)
   .settings(testSettings: _*)
-  .settings(libraryDependencies ++= artifacts.scalaLogging ++ artifacts.akkaHttp ++ artifacts.pureconfig)
+  .settings(libraryDependencies ++= artifacts.scalaLogging ++ artifacts.akkaHttp ++ artifacts.pureconfig ++ artifacts.parallelCollections)
   .settings(resolvers += Resolver.sonatypeRepo("releases"))
   .settings(resolvers += Resolver.sonatypeRepo("snapshots"))
